@@ -9,7 +9,7 @@ urlpatterns = [
    # Для этого вызываем метод as_view.
    path('', PostsList.as_view(), name='posts'),
    path('search/', PostsList.as_view(), name='search'),
-   path('<int:pk>', PostDetail.as_view(), name='post'),
+   path('<int:pk>/', PostDetail.as_view(), name='post'),
    path('news/create/', PostCreate.as_view(), name='news_create'),
    path('articles/create/', PostCreate.as_view(), name='articles_create'),
    path('news/<int:pk>/update/', PostUpdate.as_view(), name='news_update'),
